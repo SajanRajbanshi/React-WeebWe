@@ -1,12 +1,15 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {Typography} from "@mui/material";
+import HomePageBody from "../components/HomePageBody";
+import { Stack } from "@mui/material";
 
 export default function Home()
 {
     return ( <>
         <Header></Header>
-        <Typography>This is Home page</Typography>
+        <Stack sx={{marginTop:{xs:"50px",sm:"80px"}}}>
+            <HomePageBody></HomePageBody>
+        </Stack>
         <Footer></Footer>
     </>)
    
