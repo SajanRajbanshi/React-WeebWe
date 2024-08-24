@@ -7,7 +7,7 @@ export default function Cart()
     return (
         <>
         <Header></Header>
-        <Stack sx={{marginTop:{xs:"50px",sm:"80px"}}}>
+        <Stack sx={{marginTop:{xs:"60px",sm:"100px"}}}>
         <Typography>This is Cart</Typography>
         </Stack>
         <Footer></Footer>
