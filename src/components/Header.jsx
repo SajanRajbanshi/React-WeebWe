@@ -5,11 +5,20 @@ import {
   Box,
   Badge,
 } from "@mui/material";
+import { Link,useNavigate } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 export default function Header() {
+
+  const navigate=useNavigate();
+
+  function handleCartButtonClick()
+  {
+    navigate("/cart");
+  }
+
   return (
     <>
       <Stack
@@ -28,6 +37,8 @@ export default function Header() {
         }}
         alignItems={"center"}
       >
+        
+        <Link to={"/"} style={{textDecoration:"none",color:"black"}}>
         <Stack
           direction={"row"}
           alignItems={"center"}
@@ -58,6 +69,7 @@ export default function Header() {
             }}
           ></Box>
         </Stack>
+        </Link>
         <Stack
           direction={"row"}
           alignItems={"center"}
@@ -68,7 +80,7 @@ export default function Header() {
             <SearchIcon></SearchIcon>
           </IconButton>
           <Badge badgeContent={10} color="primary">
-            <IconButton>
+            <IconButton onClick={handleCartButtonClick}>
               <ShoppingCartOutlinedIcon />
             </IconButton>
           </Badge>
